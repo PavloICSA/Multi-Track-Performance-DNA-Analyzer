@@ -190,7 +190,7 @@ Replace `icon.ico` with your custom icon file
 
 ### User Requirements
 - Windows 10/11 (64-bit)
-- ~1 GB free disk space
+- ~20 GB free disk space
 - Administrator rights for installation
 
 ### Installation Steps for End Users
@@ -221,6 +221,7 @@ Replace `icon.ico` with your custom icon file
 - Multi-track analysis
 - ML model integration
 - Professional installer
+
 
 
 
