@@ -198,7 +198,7 @@ All application code, analysis algorithms, and GUI design are original work crea
 - **Contact:** pavel.likhovid@gmail.com
 
 ## 📧 Code, Demo, Installation Files
-- **Repository**: [[GitHub URL]](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/)
+- **Repository**: [GitHub URL](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/)
 - **Demo Video**: [YouTube URL]
 - **Installer Download**: [Release URL](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases/)
 
@@ -216,6 +216,7 @@ This application directly addresses the **Driver Training & Insights** category 
 ---
 
 **Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the developer.
+
 
 
 
