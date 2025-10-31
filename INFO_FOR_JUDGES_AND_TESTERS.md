@@ -193,9 +193,9 @@ All application code, analysis algorithms, and GUI design are original work crea
 
 ## 👥 Team Information
 - **Team/Developer:** _Pavlo Lykhovyd_
-- **Location:** _UKRAINE_
-- **Bio:** _Self-taught software developer, with a strong passion for AI/ML and programming._
-- **Contact:** _pavlolykhovyd55@gmail.com_
+- **Location:** UKRAINE
+- **Bio:** Self-taught software developer, with a strong passion for AI/ML and programming.
+- **Contact:** pavel.likhovid@gmail.com
 
 ## 📧 Code, Demo, Installation Files
 - **Repository**: [[GitHub URL]](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/)
@@ -216,5 +216,6 @@ This application directly addresses the **Driver Training & Insights** category 
 ---
 
 **Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the developer.
+
 
 
