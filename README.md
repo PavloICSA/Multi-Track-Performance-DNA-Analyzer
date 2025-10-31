@@ -275,7 +275,7 @@ This system provides unprecedented insight into driver performance patterns, ena
 
 ## 📄 License
 
-MIT License - See [LICENSE](LICENSE) file for details.
+MIT License - See [LICENSE](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/blob/main/LICENSE.md) file for details.
 
 This project uses open-source components:
 - Python (PSF License)
@@ -297,4 +297,5 @@ Built for the **Driver Training & Insights** category, this application addresse
 
 
 **Made with ❤️ by Pavlo Lykhovyd | Ukraine 🇺🇦**
+
 
