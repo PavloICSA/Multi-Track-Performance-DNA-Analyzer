@@ -6,7 +6,7 @@ This guide will help you create a production-ready `setup.exe` installer for the
 ## Prerequisites
 
 ### 1. Python Environment
-- Python 3.8 or higher installed
+- Python 3.13 installed
 - All dependencies from `requirements.txt` installed
 - Run: `pip install -r requirements.txt`
 
@@ -221,6 +221,7 @@ Replace `icon.ico` with your custom icon file
 - Multi-track analysis
 - ML model integration
 - Professional installer
+
 
 
 
