@@ -1,0 +1,19 @@
+# DNA Analyzer - Python Dependencies
+
+# GUI Framework
+customtkinter>=5.0.0
+tkinter-tooltip>=2.1.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Optional: For better performance
+scipy>=1.10.0
