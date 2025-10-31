@@ -216,11 +216,11 @@ Replace `icon.ico` with your custom icon file
 
 ## Version History
 
-### v2.0.0 (Current)
+### v1.0.0 (Current)
 - Full GUI application
 - Multi-track analysis
 - ML model integration
 - Professional installer
 
-## License
-Copyright (C) 2024 Performance DNA Team
+
+
