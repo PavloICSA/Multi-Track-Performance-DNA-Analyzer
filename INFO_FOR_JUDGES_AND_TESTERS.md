@@ -8,7 +8,7 @@
 ### For Judges and Testers
 
 #### Quick Start (Recommended)
-1. **Download the installer**: [MTP_DNA_Analyzer_Setup.exe](LINK_TO_RELEASE)
+1. **Download the installer**: [MTP_DNA_Analyzer_Setup.exe](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases/download/v1.0.0/MTP_DNA_Analyzer_Setup.exe)
 2. **Run the installer** and follow the setup wizard
 3. **Launch** the application from Start Menu or Desktop shortcut
 4. **Click "Quick Start Guide"** in the application for usage instructions
@@ -216,4 +216,5 @@ This application directly addresses the **Driver Training & Insights** category 
 ---
 
 **Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the developer.
+
 
