@@ -83,6 +83,25 @@ The analyzer processes multiple data types:
 - **Weather Data**: Temperature, humidity, wind conditions
 - **Race Results**: Final positions and race-specific performance
 
+### 📁 Note on Large Telemetry Files
+
+Due to GitHub's file size limitations (2GB per file), the large telemetry CSV files are not included in this repository. These files can be obtained from the official race data sources and manually added to the corresponding track folders:
+
+**Required Telemetry Files:**
+- `COTA/Race 1/R1_cota_telemetry_data.csv`
+- `COTA/Race 2/R2_cota_telemetry_data.csv`
+- `Road America/Race 1/R1_road_america_telemetry_data.csv`
+- `Road America/Race 2/R2_road_america_telemetry_data.csv`
+- `Sebring/Race 2/sebring_telemetry_R2.csv`
+- `Sonoma/Race 1/sonoma_telemetry_R1.csv`
+- `Sonoma/Race 2/sonoma_telemetry_R2.csv`
+- `VIR/Race 1/R1_vir_telemetry_data.csv`
+- `VIR/Race 2/R2_vir_telemetry_data.csv`
+- `barber/R1_barber_telemetry_data.csv`
+- `barber/R2_barber_telemetry_data.csv`
+
+The application will function with the included lap time, sector time, and race results data. Full telemetry analysis features require these additional files to be placed in their respective directories.
+
 ## 🚀 Usage
 
 ### Quick Start
