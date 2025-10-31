@@ -200,7 +200,7 @@ All application code, analysis algorithms, and GUI design are original work crea
 ## 📧 Code, Demo, Installation Files
 - **Repository**: [[GitHub URL]](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/)
 - **Demo Video**: [YouTube URL]
-- **Installer Download**: [Release URL](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases/download/v1.0.0/MTP_DNA_Analyzer_Setup.exe)
+- **Installer Download**: [Release URL](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases/)
 
 ## 🏆 Hackathon Category
 **Driver Training & Insights**
@@ -216,6 +216,7 @@ This application directly addresses the **Driver Training & Insights** category 
 ---
 
 **Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the developer.
+
 
 
 
