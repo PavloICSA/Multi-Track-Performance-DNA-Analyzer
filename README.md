@@ -3,7 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/)
 [![Platform: Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](https://www.microsoft.com/windows)
-[![Release](https://img.shields.io/github/v/release/PavloICSA/Multi-Track-Performance-DNA-Analyzer)](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases)
+[![🏁 Release](https://img.shields.io/github/v/release/PavloICSA/Multi-Track-Performance-DNA-Analyzer?label=🏁%20Release&color=red)](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases)
+[![🏎️ Tracks](https://img.shields.io/badge/🏎️%20Tracks-6-orange)](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer)
+[![👥 Drivers](https://img.shields.io/badge/👥%20Drivers-38-green)](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer)
 
 > An AI-powered racing performance analysis tool that creates unique "performance fingerprints" for drivers across multiple tracks, identifying strengths, weaknesses, and driving characteristics.
 
