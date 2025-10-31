@@ -243,13 +243,9 @@ Multi-Track-Performance-DNA-Analyzer/
 
 ## 🎯 Future Enhancements
 
-1. **Real-Time DNA Tracking**: Live analysis during practice sessions
-2. **Predictive Modeling**: Robust ML-driven race performance forecasting
-3. **Cross-Platform Support**: macOS and Linux compatibility
-4. **Mobile Application**: Android/iOS app for trackside use
-5. **Enhanced Telemetry Integration**: Deeper car data analysis
-6. **Cloud Sync**: Multi-device data synchronization
-7. **Team Collaboration**: Shared insights and reports
+1. **Predictive Modeling**: Robust ML-driven race performance forecasting
+2. **Cross-Platform Support**: macOS and Linux compatibility
+3. **Mobile Application**: Android/iOS app for trackside use
 
 ## 🏆 Results Summary
 
@@ -267,15 +263,13 @@ This system provides unprecedented insight into driver performance patterns, ena
 ## 📚 Documentation
 
 - **[README.md](README.md)** - This file (overview and quick start)
-- **[INFO_FOR_JUDGES_AND_TESTERS.md](INFO_FOR_JUDGES_AND_TESTERS.md)** - Hackathon submission guide
+- **[INFO_FOR_JUDGES_AND_TESTERS.md](INFO_FOR_JUDGES_AND_TESTERS.md)** - The information for Hackathon Judges and testers.
 - **[BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md)** - How to build the installer
-- **[HOW_TO_CREATE_RELEASE.md](HOW_TO_CREATE_RELEASE.md)** - Release management guide
-- **[RELEASE_NOTES.md](RELEASE_NOTES.md)** - Version history and changes
 
 ## 📧 Support & Contact
 
 - **Issues**: [GitHub Issues](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/issues)
-- **Email**: pavlolykhovyd55@gmail.com
+- **Email**: pavel.likhovid@gmail.com
 - **Developer**: Pavlo Lykhovyd
 - **Location**: Ukraine
 
@@ -303,3 +297,4 @@ Built for the **Driver Training & Insights** category, this application addresse
 
 
 **Made with ❤️ by Pavlo Lykhovyd | Ukraine 🇺🇦**
+
