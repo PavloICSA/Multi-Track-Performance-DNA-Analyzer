@@ -48,8 +48,6 @@ python main_launcher.py
 
 **Building the installer**: See [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) for detailed build instructions.
 
-**Creating releases**: See [HOW_TO_CREATE_RELEASE.md](HOW_TO_CREATE_RELEASE.md) for release management.
-
 ## 🎯 Key Features
 
 ### 1. **Driver DNA Profiling**
@@ -302,5 +300,6 @@ Built for the **Driver Training & Insights** category, this application addresse
 - ✅ Benchmarking against peers through cluster analysis
 
 ---
+
 
 **Made with ❤️ by Pavlo Lykhovyd | Ukraine 🇺🇦**
