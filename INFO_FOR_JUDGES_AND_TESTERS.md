@@ -23,8 +23,8 @@
 #### Building from Source
 ```cmd
 # 1. Clone the repository
-git clone [YOUR_REPO_URL]
-cd [REPO_NAME]
+git clone https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer.git
+cd Multi-Track-Performance-DNA-Analyzer
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -198,9 +198,9 @@ All application code, analysis algorithms, and GUI design are original work crea
 - **Contact:** _pavlolykhovyd55@gmail.com_
 
 ## 📧 Code, Demo, Installation Files
-- **Repository**: [GitHub URL]
+- **Repository**: [[GitHub URL]](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/)
 - **Demo Video**: [YouTube URL]
-- **Installer Download**: [Release URL]
+- **Installer Download**: [Release URL](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases/download/v1.0.0/MTP_DNA_Analyzer_Setup.exe)
 
 ## 🏆 Hackathon Category
 **Driver Training & Insights**
@@ -215,4 +215,5 @@ This application directly addresses the **Driver Training & Insights** category 
 
 ---
 
-**Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the team.
+**Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the developer.
+
