@@ -35,6 +35,7 @@ installer_output/
 # IDE
 .vscode/
 .idea/
+.kiro/
 *.swp
 *.swo
 *~
