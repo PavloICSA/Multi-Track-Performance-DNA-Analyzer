@@ -56,6 +56,15 @@ The video demonstrates:
 - **Data Points**: 155+ driver-track combinations.
 - **Metrics**: Sector times, lap times, speed data, consistency metrics.
 
+**Note on Large Telemetry Files**: Due to GitHub's file size limitations, the large telemetry CSV files (>2GB) are not included in the repository. These files can be obtained from the official race data sources:
+- COTA Race 1 & 2 telemetry data
+- Road America Race 1 & 2 telemetry data
+- Sebring Race 2 telemetry data
+- Sonoma Race 1 & 2 telemetry data
+- VIR Race 1 & 2 telemetry data
+- Barber Race 1 & 2 telemetry data
+
+To use the full dataset, manually place these telemetry CSV files in their corresponding track/race folders. The application will function with the included lap time and sector data, but full telemetry analysis requires these additional files.
 ### Custom Dataset Support
 - Users can import their own CSV racing data;
 - Flexible format support with automatic detection;
@@ -216,6 +225,7 @@ This application directly addresses the **Driver Training & Insights** category 
 ---
 
 **Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the developer.
+
 
 
 
