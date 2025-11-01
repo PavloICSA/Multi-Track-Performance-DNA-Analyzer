@@ -2,7 +2,8 @@
 
 block_cipher = None
 
-a = Analysis(
+# Build main_launcher.exe first
+main_launcher = Analysis(
     ['main_launcher.py'],
     pathex=[],
     binaries=[],
@@ -64,11 +65,54 @@ a = Analysis(
     noarchive=False,
 )
 
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+main_pyz = PYZ(main_launcher.pure, main_launcher.zipped_data, cipher=block_cipher)
 
-exe = EXE(
-    pyz,
-    a.scripts,
+main_exe = EXE(
+    main_pyz,
+    main_launcher.scripts,
+    [],
+    exclude_binaries=True,
+    name='main_launcher',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon='icon.ico',
+)
+
+# Build splash_launcher.exe (the main entry point)
+splash_launcher = Analysis(
+    ['splash_launcher.py'],
+    pathex=[],
+    binaries=[],
+    datas=[
+        ('icon.ico', '.'),
+    ],
+    hiddenimports=[
+        'tkinter',
+        'tkinter.ttk',
+    ],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
+    noarchive=False,
+)
+
+splash_pyz = PYZ(splash_launcher.pure, splash_launcher.zipped_data, cipher=block_cipher)
+
+splash_exe = EXE(
+    splash_pyz,
+    splash_launcher.scripts,
     [],
     exclude_binaries=True,
     name='MTP DNA Analyzer',
@@ -86,12 +130,17 @@ exe = EXE(
 )
 
 coll = COLLECT(
-    exe,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
+    splash_exe,
+    splash_launcher.binaries,
+    splash_launcher.zipfiles,
+    splash_launcher.datas,
+    main_exe,
+    main_launcher.binaries,
+    main_launcher.zipfiles,
+    main_launcher.datas,
     strip=False,
     upx=True,
     upx_exclude=[],
     name='MTP DNA Analyzer',
 )
+
