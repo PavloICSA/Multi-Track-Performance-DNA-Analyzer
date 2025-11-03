@@ -44,8 +44,8 @@ def show_error_dialog(title, message):
         root.destroy()
     except:
         # Fallback to console if tkinter fails
-        print(f"ERROR: {title}")
-        print(message)
+        # ERROR occurred
+        pass
 
 def launch_application():
     """Launch the main DNA Analyzer GUI"""
