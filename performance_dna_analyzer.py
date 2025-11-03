@@ -44,10 +44,10 @@ class PerformanceDNAAnalyzer:
                 
                 self.inference_engine = DNAModelInference(model_dir=model_dir)
                 self.feature_engineering = DNAFeatureEngineering()
-                print("✅ Initialized with pre-trained model")
+                # Initialized with pre-trained model
             except Exception as e:
-                print(f"⚠️ Failed to load pre-trained model: {e}")
-                print("   Falling back to original implementation")
+                # Failed to load pre-trained model, falling back to original implementation
+                pass
                 self.use_pretrained = False
                 self.inference_engine = None
                 self.feature_engineering = None
@@ -71,17 +71,17 @@ class PerformanceDNAAnalyzer:
         """
         # Handle DataFrame input (for model-based inference)
         if isinstance(data_source, pd.DataFrame):
-            print("🔄 Loading user-provided DataFrame...")
+            # Loading user-provided DataFrame
             self._load_from_dataframe(data_source)
-            print("✅ Data loading complete!")
+            # Data loading complete
             return self
         
         # Handle list of DataFrames
         if isinstance(data_source, list) and all(isinstance(df, pd.DataFrame) for df in data_source):
-            print("🔄 Loading user-provided DataFrames...")
+            # Loading user-provided DataFrames
             combined_df = pd.concat(data_source, ignore_index=True)
             self._load_from_dataframe(combined_df)
-            print("✅ Data loading complete!")
+            # Data loading complete
             return self
         
         # Handle directory path input
@@ -89,17 +89,17 @@ class PerformanceDNAAnalyzer:
             data_path = Path(data_source)
             if not data_path.exists():
                 raise ValueError(f"Data directory not found: {data_source}")
-            print(f"🔄 Loading data from directory: {data_source}...")
+            # Loading data from directory
             # Use original loading logic with custom path
             self._load_from_directory(data_path)
-            print("✅ Data loading complete!")
+            # Data loading complete
             return self
         
         # Default behavior: load from track directories
-        print("🔄 Loading data from all tracks...")
+        # Loading data from all tracks
         
         for track in self.tracks:
-            print(f"   📍 Processing {track}...")
+            # Processing track
             track_path = Path(track)
             
             track_info = {
@@ -126,7 +126,7 @@ class PerformanceDNAAnalyzer:
                         # Try different delimiters
                         for delimiter in [';', ',', '\t']:
                             try:
-                                df = pd.read_csv(file, delimiter=delimiter)
+                                df = pd.read_csv(file, delimiter=delimiter, encoding='latin-1')
                                 if len(df.columns) > 5:  # Valid data
                                     # Clean column names (remove leading/trailing spaces)
                                     df.columns = df.columns.str.strip()
@@ -137,7 +137,8 @@ class PerformanceDNAAnalyzer:
                             except:
                                 continue
                     except Exception as e:
-                        print(f"      ⚠️ Error loading {file.name}: {e}")
+                        # Error loading sector data file
+                        pass
                 
                 # Load best laps data
                 best_lap_files = list(race_path.glob('*Best 10 Laps*.CSV'))
@@ -145,7 +146,7 @@ class PerformanceDNAAnalyzer:
                     try:
                         for delimiter in [';', ',', '\t']:
                             try:
-                                df = pd.read_csv(file, delimiter=delimiter)
+                                df = pd.read_csv(file, delimiter=delimiter, encoding='latin-1')
                                 if len(df.columns) > 5:
                                     # Clean column names
                                     df.columns = df.columns.str.strip()
@@ -156,7 +157,8 @@ class PerformanceDNAAnalyzer:
                             except:
                                 continue
                     except Exception as e:
-                        print(f"      ⚠️ Error loading {file.name}: {e}")
+                        # Error loading best laps file
+                        pass
                 
                 # Load weather data
                 weather_files = list(race_path.glob('*Weather*.CSV'))
@@ -164,7 +166,7 @@ class PerformanceDNAAnalyzer:
                     try:
                         for delimiter in [';', ',', '\t']:
                             try:
-                                df = pd.read_csv(file, delimiter=delimiter)
+                                df = pd.read_csv(file, delimiter=delimiter, encoding='latin-1')
                                 if len(df.columns) > 3:
                                     # Clean column names
                                     df.columns = df.columns.str.strip()
@@ -175,11 +177,12 @@ class PerformanceDNAAnalyzer:
                             except:
                                 continue
                     except Exception as e:
-                        print(f"      ⚠️ Error loading {file.name}: {e}")
+                        # Error loading weather file
+                        pass
             
             self.track_data[track] = track_info
             
-        print("✅ Data loading complete!")
+        # Data loading complete
         return self
     
     def _load_from_dataframe(self, df: pd.DataFrame):
@@ -241,7 +244,7 @@ class PerformanceDNAAnalyzer:
             try:
                 for delimiter in [';', ',', '\t']:
                     try:
-                        df = pd.read_csv(file, delimiter=delimiter)
+                        df = pd.read_csv(file, delimiter=delimiter, encoding='latin-1')
                         if len(df.columns) > 5:
                             df.columns = df.columns.str.strip()
                             df['track'] = track_name
@@ -250,7 +253,8 @@ class PerformanceDNAAnalyzer:
                     except:
                         continue
             except Exception as e:
-                print(f"   ⚠️ Error loading {file.name}: {e}")
+                # Error loading file
+                pass
         
         self.track_data[track_name] = track_info
         if track_name not in self.tracks:
@@ -258,7 +262,7 @@ class PerformanceDNAAnalyzer:
     
     def analyze_sector_performance(self):
         """Analyze sector performance across all tracks"""
-        print("🔍 Analyzing sector performance...")
+        # Analyzing sector performance
         
         all_sector_data = []
         for track, data in self.track_data.items():
@@ -267,7 +271,7 @@ class PerformanceDNAAnalyzer:
                     all_sector_data.append(df)
         
         if not all_sector_data:
-            print("❌ No sector data found")
+            # No sector data found
             return self
             
         combined_sectors = pd.concat(all_sector_data, ignore_index=True)
@@ -309,7 +313,7 @@ class PerformanceDNAAnalyzer:
         driver_track_performance = driver_track_performance.reset_index()
         
         self.sector_analysis = driver_track_performance
-        print(f"✅ Analyzed {len(driver_track_performance)} driver-track combinations")
+        # Analyzed driver-track combinations
         return self
     
     def create_driver_dna_profiles(self):
@@ -322,7 +326,7 @@ class PerformanceDNAAnalyzer:
         Returns:
             self for method chaining
         """
-        print("🧬 Creating driver DNA profiles...")
+        # Creating driver DNA profiles
         
         # Route to inference engine if using pre-trained model
         if self.use_pretrained and self.inference_engine is not None:
@@ -330,7 +334,7 @@ class PerformanceDNAAnalyzer:
         
         # Original implementation
         if not hasattr(self, 'sector_analysis'):
-            print("❌ No sector analysis available")
+            # No sector analysis available
             return self
         
         # Create feature matrix for each driver across all tracks
@@ -370,7 +374,7 @@ class PerformanceDNAAnalyzer:
             
             self.driver_profiles[driver] = profile
         
-        print(f"✅ Created DNA profiles for {len(self.driver_profiles)} drivers")
+        # Created DNA profiles for drivers
         return self
     
     def _create_profiles_with_model(self):
@@ -389,7 +393,7 @@ class PerformanceDNAAnalyzer:
                         all_sector_data.append(df)
             
             if not all_sector_data:
-                print("❌ No sector data available for inference")
+                # No sector data available for inference
                 return self
             
             # Combine all data
@@ -398,11 +402,11 @@ class PerformanceDNAAnalyzer:
             # Use inference engine to create profiles
             self.driver_profiles = self.inference_engine.create_driver_profiles(combined_data)
             
-            print(f"✅ Created DNA profiles for {len(self.driver_profiles)} drivers using ML model")
+            # Created DNA profiles using ML model
             
         except Exception as e:
-            print(f"⚠️ Model inference failed: {e}")
-            print("   Falling back to original implementation")
+            # Model inference failed, falling back to original implementation
+            pass
             self.use_pretrained = False
             # Retry with original implementation
             return self.create_driver_dna_profiles()
@@ -514,10 +518,10 @@ class PerformanceDNAAnalyzer:
     
     def visualize_driver_dna(self, driver_id=None):
         """Create comprehensive DNA visualization"""
-        print("📊 Creating DNA visualizations...")
+        # Creating DNA visualizations
         
         if not self.driver_profiles:
-            print("❌ No driver profiles available")
+            # No driver profiles available
             return
         
         # If specific driver requested, show detailed view
@@ -595,7 +599,7 @@ class PerformanceDNAAnalyzer:
                 driver_ids.append(driver_id)
         
         if len(dna_features) < 3:
-            print("❌ Insufficient data for comparative analysis")
+            # Insufficient data for comparative analysis
             return
         
         # Perform clustering to identify driver archetypes
@@ -630,8 +634,7 @@ class PerformanceDNAAnalyzer:
     
     def _analyze_driver_clusters(self, clusters, driver_ids):
         """Analyze and describe driver clusters"""
-        print("\n🏁 DRIVER ARCHETYPE ANALYSIS")
-        print("=" * 50)
+        # DRIVER ARCHETYPE ANALYSIS
         
         cluster_names = {
             0: "Speed Demons",
@@ -644,9 +647,7 @@ class PerformanceDNAAnalyzer:
             cluster_drivers = [driver_ids[i] for i, c in enumerate(clusters) if c == cluster_id]
             cluster_name = cluster_names.get(cluster_id, f"Cluster {cluster_id}")
             
-            print(f"\n🏆 {cluster_name}")
-            print(f"   Drivers: {', '.join(map(str, cluster_drivers))}")
-            
+            # Cluster analysis
             # Analyze cluster characteristics
             cluster_profiles = [self.driver_profiles[d] for d in cluster_drivers]
             self._describe_cluster_characteristics(cluster_profiles, cluster_name)
@@ -671,11 +672,7 @@ class PerformanceDNAAnalyzer:
                     if key in dna:
                         dna_values[key].append(dna[key])
         
-        print(f"   Characteristics:")
-        for characteristic, values in dna_values.items():
-            if values:
-                avg_val = np.mean(values)
-                print(f"   • {characteristic.replace('_', ' ').title()}: {avg_val:.2f}")
+        # Characteristics analysis complete
 
 def main():
     """Main execution function"""
