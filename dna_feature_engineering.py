@@ -51,7 +51,7 @@ class DNAFeatureEngineering:
         
         for delimiter in delimiters:
             try:
-                df = pd.read_csv(file_path, delimiter=delimiter)
+                df = pd.read_csv(file_path, delimiter=delimiter, encoding='latin-1')
                 # Valid data should have more than 5 columns
                 if len(df.columns) > 5:
                     break
@@ -470,8 +470,7 @@ class DNAFeatureEngineering:
 
 def main():
     """Example usage of DNAFeatureEngineering"""
-    print("🧬 DNA Feature Engineering Module")
-    print("=" * 50)
+    # DNA Feature Engineering Module
     
     # Initialize feature engineering
     feature_eng = DNAFeatureEngineering()
@@ -483,29 +482,27 @@ def main():
             'barber/23_AnalysisEnduranceWithSections_Race 1_Anonymized.CSV',
             track_name='barber'
         )
-        print(f"✅ Loaded {len(df)} rows from barber track")
+        # Loaded rows from barber track
         
         # Extract driver features
         driver_features = feature_eng.extract_driver_features(df)
-        print(f"✅ Extracted features for {len(driver_features)} driver-track combinations")
+        # Extracted features for driver-track combinations
         
         # Calculate DNA signatures
         dna_features = feature_eng.calculate_dna_features(driver_features)
-        print(f"✅ Calculated DNA signatures for {len(dna_features)} drivers")
+        # Calculated DNA signatures for drivers
         
         # Create archetype labels
         archetypes = feature_eng.create_archetype_labels(dna_features)
-        print(f"✅ Assigned archetypes to {len(archetypes)} drivers")
+        # Assigned archetypes to drivers
         
         # Display sample results
-        print("\n📊 Sample DNA Features:")
-        print(dna_features.head())
-        
-        print("\n🏁 Archetype Distribution:")
-        print(archetypes.value_counts())
+        # Sample DNA Features
+        # Archetype Distribution
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        # Error occurred
+        pass
 
 
 if __name__ == "__main__":
