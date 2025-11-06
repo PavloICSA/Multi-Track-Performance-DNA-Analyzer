@@ -38,7 +38,7 @@ build_installer.bat
 ```
 
 ## 🎬 Demo Video
-**[Link to 3-minute demo video on YouTube]**
+**[Demo video on YouTube](https://youtu.be/iHxYWBuUcWQ?si=XNiNzhonI39KSXNS)**
 
 The video demonstrates:
 - Application launch;
@@ -208,7 +208,7 @@ All application code, analysis algorithms, and GUI design are original work crea
 
 ## 📧 Code, Demo, Installation Files
 - **Repository**: [GitHub URL](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/)
-- **Demo Video**: [YouTube URL]
+- **Demo Video**: [YouTube URL](https://youtu.be/iHxYWBuUcWQ?si=XNiNzhonI39KSXNS)
 - **Installer Download**: [Release URL](https://github.com/PavloICSA/Multi-Track-Performance-DNA-Analyzer/releases/)
 
 ## 🏆 Hackathon Category
@@ -225,6 +225,7 @@ This application directly addresses the **Driver Training & Insights** category 
 ---
 
 **Note for Judges**: The application is fully functional and ready for testing. No special hardware or proprietary software required. All dependencies are bundled in the installer. For any issues or questions, please contact the developer.
+
 
 
 
